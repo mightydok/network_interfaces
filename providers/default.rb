@@ -95,7 +95,7 @@ action :save do
       custom:       Chef::Recipe::NetworkInterfaces.value(:custom, new_resource.device, new_resource, node),
       hotplug:      Chef::Recipe::NetworkInterfaces.value(:hotplug, new_resource.device, new_resource, node)
     )
-    notifies :run, "execute[if_up #{new_resource.name}]", :immediately
+    #notifies :run, "execute[if_up #{new_resource.name}]", :immediately
   end
 end
 
